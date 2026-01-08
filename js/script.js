@@ -1,31 +1,3 @@
-// Header Search Js
-
-const searchWrap = document.querySelector(".searchWrap");
-const searchBtn = document.querySelector(".searchBtn");
-const searchInput = searchWrap.querySelector("input");
-
-searchBtn.addEventListener("click", (e) => {
-  e.stopPropagation(); // 🔥 prevent bubbling
-  searchWrap.classList.toggle("active");
-
-  if (searchWrap.classList.contains("active")) {
-    searchInput.focus();
-  } else {
-    searchInput.value = "";
-  }
-});
-
-searchInput.addEventListener("keydown", (e) => {
-  if (e.key === "Enter") {
-    e.preventDefault();
-    console.log("Search:", searchInput.value);
-  }
-});
-
-document.addEventListener("click", () => {
-  searchWrap.classList.remove("active");
-});
-
 const header = document.querySelector(".header");
 const webBody = document.body;
 const burger = document.querySelector(".burger");
@@ -125,12 +97,10 @@ accordionItemHeaders.forEach((accordionItemHeader) => {
 const images = [
   "assets/slider-image.jpg",
   "assets/slider-image-2.png",
+  "assets/slider-image-3.png",
   "assets/slider-image.jpg",
   "assets/slider-image-2.png",
-  "assets/slider-image.jpg",
-  "assets/slider-image-2.png",
-  "assets/slider-image.jpg",
-  "assets/slider-image-2.png",
+  "assets/slider-image-3.png",
 ];
 
 let currentIndex = 0;
